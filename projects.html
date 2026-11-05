@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-star" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+                </svg>
+                <span>Portfolio<span></span>
+            </a>
+
+            <!-- Navigasi 3 Halaman -->
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="projects.html" class="active">Proyek</a>
+                <a href="contact.html">Kontak</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-theme" title="Ubah Mode Gelap/Terang">
+                    🌙 <span id="theme-text">Mode Gelap</span>
+                </button>
+                <a href="contact.html" class="btn btn-nav-quote">Hubungi Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Section Heading -->
+        <div class="section-heading" style="margin-top: 30px;">
+            <span class="badge-highlight green-highlight">Galeri Proyek</span>
+            <p class="section-heading-text">
+                Koleksi tugas dan proyek web development yang dibangun secara mandiri menggunakan HTML5, CSS3, dan JavaScript murni.
+            </p>
+        </div>
+
+        <!-- Fitur JS 1: Filter Kategori Proyek (Click Event) -->
+        <div class="filter-wrapper">
+            <div class="filter-buttons-container">
+                <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+                <button class="filter-btn" data-filter="webapp">Web App</button>
+                <button class="filter-btn" data-filter="landing">Landing Page</button>
+                <button class="filter-btn" data-filter="uiux">UI/UX Prototype</button>
+            </div>
+        </div>
+
+        <div class="services-cards-grid" id="projects-grid">
+            <article class="service-card card-light" data-category="webapp">
+                <div class="card-left-col">
+                    <div class="badge-title">
+                        <span class="badge-text green-badge">Aplikasi Pengingat Tugas</span>
+                        <span class="badge-text green-badge">Web Application</span>
+                    </div>
+                    <p class="card-desc">
+                        Aplikasi manajemen to-do harian dengan fitur checklist, filter status tugas selesai, dan tombol hapus.
+                    </p>
+                    <button class="btn btn-dark btn-detail" 
+                            data-title="Aplikasi Pengingat Tugas (To-Do List)" 
+                            data-category="Web Application"
+                            data-desc="Proyek ini memanfaatkan manipulasi DOM dan Event Listener JavaScript untuk mencatat aktivitas baru, mencentang tugas yang sudah selesai, serta menyaring tugas berdasarkan prioritas tanpa perlu memuat ulang halaman.">
+                        Lihat Detail Proyek
+                    </button>
+                </div>
+            </article>
+
+            <article class="service-card card-dark" data-category="landing">
+                <div class="card-left-col">
+                    <div class="badge-title">
+                        <span class="badge-text white-badge">Kafe Kopi Nusantara</span>
+                        <span class="badge-text white-badge">Landing Page</span>
+                    </div>
+                    <p class="card-desc light-desc">
+                        Halaman profil kedai kopi lokal dengan menu terstruktur, efek transisi halus, dan tata letak responsif.
+                    </p>
+                    <button class="btn btn-dark btn-detail btn-white-accent" 
+                            data-title="Website Kafe Kopi Nusantara" 
+                            data-category="Landing Page"
+                            data-desc="Landing page modern yang dirancang menggunakan CSS Flexbox dan CSS Grid. Menyediakan informasi jam buka, lokasi, ulasan pelanggan, serta galeri produk yang proporsional di semua resolusi layar.">
+                        Lihat Detail Proyek
+                    </button>
+                </div>
+            </article>
+
+            <article class="service-card card-dark" data-category="webapp">
+                <div class="card-left-col">
+                    <div class="badge-title">
+                        <span class="badge-text white-badge">Kalkulator Virtual</span>
+                        <span class="badge-text white-badge">Web Application</span>
+                    </div>
+                    <p class="card-desc light-desc">
+                        Alat hitung digital yang memproses operasi aritmatika dasar secara akurat menggunakan logika JavaScript.
+                    </p>
+                    <button class="btn btn-dark btn-detail btn-white-accent" 
+                            data-title="Kalkulator Virtual Interaktif" 
+                            data-category="Web Application"
+                            data-desc="Dibangun dengan HTML button grid dan fungsi event handling JavaScript. Mampu memproses penambahan, pengurangan, perkalian, pembagian, serta tombol reset layar dengan penanganan kondisi error.">
+                        Lihat Detail Proyek
+                    </button>
+                </div>
+            </article>
+
+            <article class="service-card card-light" data-category="uiux">
+                <div class="card-left-col">
+                    <div class="badge-title">
+                        <span class="badge-text green-badge">Portal Belajar BRONE</span>
+                        <span class="badge-text green-badge">UI/UX Prototype</span>
+                    </div>
+                    <p class="card-desc">
+                        Konsep desain dashboard perkuliahan daring dengan struktur navigasi modul yang bersih dan intuitif.
+                    </p>
+                    <button class="btn btn-dark btn-detail"
+                            data-title="Desain Dashboard Belajar BRONE"
+                            data-category="UI/UX Prototype"
+                            data-desc="Prototipe antarmuka sistem belajar mahasiswa. Fokus pada kemudahan akses unduh modul kuliah, jadwal pengumpulan tugas, dan status penilaian dengan layout berbasis komponen modern.">
+                        Lihat Detail Proyek
+                    </button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <div id="project-modal" class="modal-backdrop hidden">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close-btn" title="Tutup Modal">&times;</button>
+            <span id="modal-category" class="badge-highlight green-highlight" style="font-size: 0.95rem; margin-bottom: 12px;">Kategori</span>
+            <h2 id="modal-title" style="margin: 14px 0; font-size: 1.8rem;">Judul Proyek</h2>
+            <p id="modal-desc" style="color: #fbfcfd; font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">Deskripsi proyek...</p>
+            <div style="display: flex; justify-content: flex-end;">
+                <button id="modal-close-btn2" class="btn btn-dark">Tutup Jendela</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="logo light-logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Portfolio Pribadi Primada Purnama. Dibuat dengan HTML, CSS, & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

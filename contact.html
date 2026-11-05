@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-star" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+                </svg>
+                <span>Portfolio<span>
+
+            <!-- Navigasi 3 Halaman -->
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="projects.html">Proyek</a>
+                <a href="contact.html" class="active">Kontak</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-theme" title="Ubah Mode Gelap/Terang">
+                    🌙 <span id="theme-text">Mode Gelap</span>
+                </button>
+                <a href="contact.html" class="btn btn-nav-quote">Hubungi Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="section-heading" style="margin-top: 30px;">
+            <span class="badge-highlight green-highlight">Hubungi Saya</span>
+            <p class="section-heading-text">
+                Punya pertanyaan seputar proyek, tawaran magang, atau sekadar ingin menyapa? Silakan kirimkan pesan Anda melalui formulir berikut!
+            </p>
+        </div>
+
+        <div class="contact-grid-container">
+            <aside class="contact-info-card">
+                <h3>Informasi Kontak</h3>
+                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+                    Saya selalu terbuka untuk berdiskusi seputar peluang proyek web development.
+                </p>
+
+                <ul class="contact-details-list">
+                    <li>
+                        <span class="detail-icon">👤</span>
+                        <div>
+                            <strong>Nama Lengkap</strong>
+                            <p>Primada Purnama</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="detail-icon">📍</span>
+                        <div>
+                            <strong>Lokasi</strong>
+                            <p>Kota Bogor, Jawa Barat</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="detail-icon">✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>primadapurnama@student.ub.ac.id</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="social-box">
+                    <h4>Media Sosial</h4>
+                    <div class="social-tags-row">
+                        <a href="https://github.com/prima7p" target="_blank" class="social-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/primada-purnama-ab709331a/" target="_blank" class="social-btn">LinkedIn</a>
+                        <a href="https://www.instagram.com/prima7p/?__pwa=1" target="_blank" class="social-btn">Instagram</a>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="contact-form-wrapper">
+                <div id="form-alert" class="alert hidden" role="alert"></div>
+
+                <form id="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                        <input type="text" id="nama" name="nama" placeholder="Contoh: Andi Pratama" required>
+                        <small class="error-msg" id="error-nama"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Alamat Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="nama@domain.com" required>
+                        <small class="error-msg" id="error-email"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subjek">Subjek Pesan</label>
+                        <input type="text" id="subjek" name="subjek" placeholder="Topik diskusi atau keperluan">
+                    </div>
+
+                    <div class="form-field">
+                        <div class="label-with-meta">
+                            <label for="pesan">Isi Pesan <span class="required">*</span></label>
+                            <span id="char-counter" class="char-count">0 / 300 karakter</span>
+                        </div>
+                        <textarea id="pesan" name="pesan" rows="5" maxlength="300" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
+                        <small class="error-msg" id="error-pesan"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark" style="width: 100%; padding: 18px;">
+                        Kirim Pesan Sekarang
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="logo light-logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Portfolio Pribadi Primada Purnama. Dibuat dengan HTML, CSS, & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
