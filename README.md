@@ -1,6 +1,6 @@
 # Website Portofolio Pribadi - Primada Purnama
 
-Website portofolio pribadi responsif dan interaktif yang dibangun menggunakan **HTML5, CSS3, dan JavaScript murni (Vanilla JS)** tanpa menggunakan framework maupun library tambahan.
+Website portofolio pribadi responsif dan interaktif yang dibangun menggunakan **HTML, CSS, dan JavaScript  (Vanilla JS)** tanpa menggunakan framework maupun library tambahan.
 
 Proyek ini dibuat untuk memenuhi tugas pembuatan website portofolio dengan minimal 3 halaman yang saling terhubung dan menerapkan fitur interaktif berbasis JavaScript Event.
 
